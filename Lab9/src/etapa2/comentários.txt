@@ -1,0 +1,12 @@
+COMENTÁRIOS SOBRE PRODUTORES E CONSUMIDORES.
+
+Nesse caso, como o consumidor tem um tempo fixo de 600 milisegundos, o produtor não deve passar de
+600 milisegundos, caso o contrário o código viria a sempre ver timeout no consumidor.
+
+Quando o produtor tem um tempo consideravelmente menor que o consumidor, a situação é consumo não imediato após
+o tempo decorrido de 600 milisegundos. O consumo é realizado de forma mais devagar, porém a produção continua executando
+normalmente, inevitavelmente, levando ao prenchimento da fila antes do consumo da maior parte do conteúdo da fila.
+
+Quando o produtor e o consumidor tem o mesmo tempo de produção e de consumo, a situação é de consumo imediato após
+a produção, ou seja, a produção ocorre em cojunto com o consumo. Isso significa que, assim que um número é produzido
+esse não precisa esperar consumo no array, pois será consumido logo em seguida.

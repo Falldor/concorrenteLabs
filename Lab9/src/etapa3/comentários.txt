@@ -1,0 +1,12 @@
+COMENTÁRIOS SOBRE PRODUTORES E CONSUMIDORES.
+
+A princípio, a mudança realizada é no tipo da fila implementada, dado que a nova implementação
+tem prioridade instriseca aos inteiros, ou seja, os menores inteiros sempre são colocados primeiro
+na fila de prioridade.
+
+Isso significa que, se o produtor produz muito rapidamente quando comparado ao consumidor, quando o 
+consumidor tiver a oportunidade de consumir, sempre serão consumidos os menores números.
+Nesse caso, como são números aleatórios de 1 a 10, quando muitos números 1 são gerados então o número 1 
+sempre será o número consumido.
+
+Ademais, quando igualamos o tempo de consumo e o tempo de produção a situação continua a mesma da anterior.

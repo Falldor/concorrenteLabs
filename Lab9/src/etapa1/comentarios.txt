@@ -1,0 +1,15 @@
+COMENTÁRIOS SOBRE PRODUTORES E CONSUMIDORES.
+
+A princípio, ao testar o tempo de produção com discrepância considerável ao comparar com o tempo de consumo,
+é possível perceber diferentes situações concernentes ao tempo de execuçaoão;.
+
+Primeiramente, quando o tempo de produção é maior que o tempo de consumo, as threads de consumidores realizam
+o seu trabalho de forma imediata, ou seja, essas threads consumem rapidamente o conteúdo do array deixando esse vazio. Dessa forma, 
+essas threads consumidoras ficam bloqueadas esperando a produção do produtor para proceder no loop infinito.
+
+Enquanto, quando o tempo de produção é menor que o tempo de consumo, as threads produtoras realizam seu trabalho 
+completando o array, ou seja, essas threads produzem rapidamente o conteúdo do arrau deixando esse cheio. Dessa forma,
+esss threads produtoas fica, bloqueadas esperando o consumo do consumidor para proceder no loop infinito.
+
+Logo, esse código é ineficiente devido as constatações anteriores, em um cenário ideal de eficiência os tempos de
+consumo e e produção são similares, com o objetivo de mitigar esses bloqueios para espera.
